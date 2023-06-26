@@ -1,0 +1,9 @@
+2023-06-26T14:06:40.716+08:00  INFO 9044 --- [main] com.henry.forum.LoggerTests              : Starting LoggerTests using Java 17.0.5 with PID 9044 (started by user in D:\Backend\project\forum)
+2023-06-26T14:06:40.717+08:00 DEBUG 9044 --- [main] com.henry.forum.LoggerTests              : Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-26T14:06:40.718+08:00  INFO 9044 --- [main] com.henry.forum.LoggerTests              : No active profile set, falling back to 1 default profile: "default"
+2023-06-26T14:06:42.321+08:00  INFO 9044 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-06-26T14:06:42.541+08:00  INFO 9044 --- [main] com.henry.forum.LoggerTests              : Started LoggerTests in 2.252 seconds (process running for 3.396)
+2023-06-26T14:06:43.424+08:00 DEBUG 9044 --- [main] com.henry.forum.LoggerTests              : debug log
+2023-06-26T14:06:43.425+08:00  INFO 9044 --- [main] com.henry.forum.LoggerTests              : info log
+2023-06-26T14:06:43.425+08:00  WARN 9044 --- [main] com.henry.forum.LoggerTests              : warn log
+2023-06-26T14:06:43.425+08:00 ERROR 9044 --- [main] com.henry.forum.LoggerTests              : error log
