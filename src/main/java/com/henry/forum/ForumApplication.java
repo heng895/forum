@@ -12,5 +12,4 @@ public class ForumApplication {
 	{
 		SpringApplication.run(ForumApplication.class, args);
 	}
-
 }
