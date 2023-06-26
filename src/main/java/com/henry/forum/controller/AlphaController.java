@@ -2,8 +2,6 @@ package com.henry.forum.controller;
 
 
 import com.henry.forum.service.AlphaService;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
@@ -35,7 +35,7 @@ public class AlphaController {
     }
 
     @RequestMapping("/http")
-    public void http(HttpServletRequest request,HttpServletResponse response){
+    public void http(HttpServletRequest request, HttpServletResponse response){
         //获取请求对象
         System.out.println(request.getMethod());
         System.out.println(request.getServletPath());
