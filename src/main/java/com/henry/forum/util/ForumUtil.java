@@ -5,7 +5,7 @@ import org.springframework.util.DigestUtils;
 
 import java.util.UUID;
 
-public class CommunityUtil {
+public class ForumUtil {
 
     // 生成随机字符串
     public static String generateUUID() {

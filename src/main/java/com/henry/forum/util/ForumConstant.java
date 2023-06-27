@@ -1,6 +1,6 @@
 package com.henry.forum.util;
 
-public interface CommunityConstant {
+public interface ForumConstant {
 
     /**
      * 激活成功
