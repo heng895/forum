@@ -2,17 +2,22 @@ package com.henry.forum.controller;
 
 
 import com.henry.forum.service.AlphaService;
+import com.henry.forum.util.ForumUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.thymeleaf.spring5.processor.SpringSrcTagProcessor;
 
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.DrbgParameters;
 import java.util.*;
 
 @Controller
@@ -138,6 +143,45 @@ public class AlphaController {
         emp.put("salary",8000);
         list.add(emp);
         return list;
+    }
+
+    //cookie实例
+    @RequestMapping(path = "/cookie/set",method = RequestMethod.GET)
+    @ResponseBody
+    public String setCookie(HttpServletResponse response){
+        //create cookie
+        Cookie cookie = new Cookie("code", ForumUtil.generateUUID());
+        //set scope
+        cookie.setPath("/forum/alpha");
+        //set survival time (默认存在内存)
+        cookie.setMaxAge(60*10);
+        // send cookie
+        response.addCookie(cookie);
+        return "set cookie";
+    }
+
+    @RequestMapping(path = "/cookie/get",method = RequestMethod.GET)
+    @ResponseBody
+    public String getCookie(@CookieValue("code") String code){
+        System.out.println(code);
+        return "get cookie";
+    }
+
+    //session example
+    @RequestMapping(path = "/session/set",method = RequestMethod.GET)
+    @ResponseBody
+    public String setSession(HttpSession session){
+        session.setAttribute("id",2);
+        session.setAttribute("name","Test");
+        return "set session";
+    }
+
+    @RequestMapping(path = "/session/get",method = RequestMethod.GET)
+    @ResponseBody
+    public String getSession(HttpSession session){
+        System.out.println(session.getAttribute("id"));
+        System.out.println(session.getAttribute("name"));
+        return "get session";
     }
 
 }

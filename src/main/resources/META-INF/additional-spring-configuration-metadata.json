@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "forum.path.domain",
+      "type": "java.lang.String",
+      "description": "Description for forum.path.domain."
+  }
+] }
